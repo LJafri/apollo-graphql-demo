@@ -39,11 +39,11 @@ const RootQuery = new GraphQLObjectType({
                 return clients.find(client => client.id === args.id);
             }
         },
-        client: {
-            type: ClientType,
+        project: {
+            type: ProjectType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
-                return clients.find(client => client.id === args.id);
+                return projects.find(project => project.id === args.id);
             }
         },
         projects: {
